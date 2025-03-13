@@ -1,0 +1,41 @@
+package desafios;
+import java.util.Scanner;
+
+public class segmentosMelhorado
+{
+    public static void main(String[] args)
+    {
+        Scanner segmentos = new Scanner(System.in);
+
+        System.out.print("Digite o primeiro tamanho da reta: ");
+        int retaUm = segmentos.nextInt();
+
+        System.out.print("Digite o segundo tamanho da reta: ");
+        int retaDois = segmentos.nextInt();
+
+        System.out.print("Digite o terceiro tamanho da reta: ");
+        int retaTres = segmentos.nextInt();
+
+        if((retaUm + retaDois > retaTres) && (retaUm + retaTres > retaDois) && (retaDois + retaTres > retaUm))
+        {
+            System.out.println("É possível formar um triângulo");
+
+            if (retaUm == retaDois && retaDois == retaTres)
+            {
+                System.out.println("Triângulo EQUILÁTERO: Todos os lados são iguais.");
+            }
+            else if (retaUm == retaDois || retaUm == retaTres || retaDois == retaTres)
+            {
+                System.out.println("Triângulo ISÓSCELES: Dois lados são iguais.");
+            }
+            else
+            {
+                System.out.println("Triângulo ESCALENO: Todos os lados são diferentes.");
+            }
+        }
+        else
+        {
+            System.out.println("Não é possível formar um triângulo");
+        }
+    }
+}
