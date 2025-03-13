@@ -1,0 +1,27 @@
+package desafios;
+import java.util.Scanner;
+
+public class segmentosUm
+{
+    public static void main(String[] args)
+    {
+        Scanner segmentos = new Scanner(System.in);
+        System.out.print("Digite o primeiro tamanho da reta: ");
+        int retaUm = segmentos.nextInt();
+
+        System.out.print("Digite o segundo tamanho da reta: ");
+        int retaDois = segmentos.nextInt();
+
+        System.out.print("Digite o terceiro tamanho da reta: ");
+        int retaTres = segmentos.nextInt();
+
+        if((retaUm + retaDois > retaTres) && (retaUm + retaTres > retaDois) && (retaDois + retaTres > retaUm))
+        {
+           System.out.print("É possivel formar triângulo");
+        }
+        else
+        {
+            System.out.print("Não é possivel formar um triângulo");
+        }
+    }
+}
