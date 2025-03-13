@@ -1,0 +1,32 @@
+package desafios;
+import java.util.Scanner;
+
+public class pa
+{
+
+    public static void main(String[] args)
+    {
+        Scanner progressao = new Scanner(System.in);
+
+        System.out.print("Primeiro termo: ");
+        int primeirotermo = progressao.nextInt();
+
+        System.out.print("Razão: ");
+        int r = progressao.nextInt();
+
+        int soma = 0;
+
+        System.out.println("Os 10 primeiros termos são:");
+        for (int i = 0; i < 10; i++)
+        {
+            int termo = primeirotermo + (i * r);
+            System.out.print(termo + " ");
+            soma = soma + termo;
+        }
+
+        // Tentando mostrar a soma no final
+        System.out.println("\nSoma dos 10 primeiros termos: " + soma);
+
+        progressao.close();
+    }
+}
